@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="resultm.json"></script>
   <style type="text/css">
   	.frame
   	{
@@ -59,11 +60,10 @@
     border-collapse: collapse; 
     width: 40%;
     height: 300px;
-    /*font-weight: bold;*/
     font-family: Times New Roman;
     color: yellow;
-   /* padding: 10px;
-    margin: 10px;*/
+    background-color: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.4);
     text-align: justify-all;
   }
   </style>
@@ -113,11 +113,11 @@
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="1"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="2"></td>
       </tr>
     </table>
 <p class="para">Marvel's Daredevil, or simply Daredevil, is an American web television series created for Netflix by Drew Goddard, based on the Marvel Comics character of the same name. It is set in the Marvel Cinematic Universe (MCU), sharing continuity with the films of the franchise, and is the first in a series of shows that lead to The Defenders crossover miniseries. The series is produced by Marvel Television in association with ABC Studios, with DeKnight Productions for the first season and Goddard Textiles for the first and second seasons. Steven S. DeKnight serves as showrunner on the first season, with Doug Petrie and Marco Ramirez taking over for the second season, and Erik Oleson joining the series as its showrunner for its third season; Goddard serves as a consultant for the series.
@@ -131,5 +131,10 @@ All episodes of the first season were released on Netflix on April 10, 2015, whi
 <img src="band1.jpg" class="tab1">
 <img src="band2.jpg" class="tab2">
 <img src="band3.jpg" class="tab3">
+<script type="text/javascript">
+  var value_print = JSON.parse(data);
+  document.getElementById(1).innerHTML = value_print[2].Positive + "%";
+  document.getElementById(2).innerHTML = value_print[2].Negative + "%";
+</script>
 </body>
 </html>

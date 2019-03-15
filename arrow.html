@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="resultm.json"></script>
   <style type="text/css">
   	.checked 
 	{
@@ -52,11 +53,10 @@
     border-collapse: collapse; 
     width: 40%;
     height: 300px;
-    /*font-weight: bold;*/
     font-family: Times New Roman;
     color: white;
-   /* padding: 10px;
-    margin: 10px;*/
+    background-color: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.4);
     text-align: justify-all;
 	}
   </style>
@@ -106,21 +106,11 @@
       </tr>
       <tr>
         <th>positive</th>
-        <td>
-        	<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-		</td>
+        <td id="1"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td><span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span></td>
+        <td id="2"></td>
       </tr>
     </table>
 <p class="para">Arrow is an American television series, developed by Greg Berlanti, Marc Guggenheim and Andrew Kreisberg, based on the DC Comics character Green Arrow. The series premiered in the United States on October 10, 2012 for The CW television network. The first six seasons have been released on DVD to Regions 1, 2 and 4 and on Blu-ray to Regions A and B.
@@ -129,5 +119,10 @@ Arrow follows billionaire playboy Oliver Queen (Stephen Amell), who, after five 
 
 On April 2, 2018, the CW renewed the series for a seventh season, which premiered on October 15, 2018.On January 31, 2019, The CW renewed the series for an eighth season, which is set to be the final season of the series, with an abbreviated ten-episode season. As of March 11, 2019, 153 episodes of Arrow have aired.</p>
 <img src="arrow1.jpg" class="tab">
+<script type="text/javascript">
+  var value_print = JSON.parse(data);
+  document.getElementById(1).innerHTML = value_print[0].Positive + "%";
+  document.getElementById(2).innerHTML = value_print[0].Negative + "%";
+</script>
 </body>
 </html>

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <script src="resultm.json"></script>
   <style type="text/css">
     .frame
     {
@@ -47,11 +48,10 @@
     border-collapse: collapse; 
     width: 40%;
     height: 300px;
-    /*font-weight: bold;*/
     font-family: Times New Roman;
     color: red;
-   /* padding: 10px;
-    margin: 10px;*/
+    background-color: rgba(0,0,0,0.6);
+    color: rgba(255,255,255,0.4);
     text-align: justify-all;
   }
   </style>
@@ -101,33 +101,11 @@
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="1"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
-      </tr>
-    </table>
-    <table border="1" class="daredevil">
-     <tr>
-        <th>Name</th>
-        <td>Daredevil</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>The first in a planned series of shows detailing the Marvel universe, "Daredevil" follows Matt Murdock, attorney by day and vigilante by night.</td>
-     </tr>
-     <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>55%</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td>11%</td>
+        <td id="2"></td>
       </tr>
     </table>
 <p class="para">Band of Brothers is a 2001 American war drama miniseries based on historian Stephen E. Ambrose's 1992 non-fiction book Band of Brothers.The executive producers were Steven Spielberg and Tom Hanks, who had collaborated on the 1998 World War II film Saving Private Ryan.The episodes first aired in 2001 on HBO. The series won Emmy and Golden Globe awards in 2001 for best miniseries.
@@ -137,5 +115,10 @@ The series dramatizes the history of "Easy" Company, 2nd Battalion, 506th Parach
 The title for the book and series comes from the St Crispin's Day Speech in William Shakespeare's play Henry V, delivered by King Henry before the Battle of Agincourt. Ambrose quotes a passage from the speech on his book's first page; this passage is spoken by Carwood Lipton in the series finale.</p>
 <div style="position: absolute; top: 655px; left: 50px; color: white; font-size: 2em;"><strong> Golden Globe Awards</strong></div>
 <img src="band.jpg" class="tab">
+<script type="text/javascript">
+  var value_print = JSON.parse(data);
+  document.getElementById(1).innerHTML = value_print[1].Positive + "%";
+  document.getElementById(2).innerHTML = value_print[1].Negative + "%";
+</script>
 </body>
 </html>
