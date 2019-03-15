@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Show Hunter</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "icon" href =  
+"logo.jpg" 
+        type = "image/x-icon"> 
+	<style type="text/css">
+	.checked 
+	{
+  		 color: orange;
+	}
+	.a
+	{
+		position: absolute;
+		left: 100px;
+	}
+	.b
+	{
+		background-image: url(back10.jpg);
+		background-attachment: fixed;
+  		background-position: center;
+  		background-repeat: no-repeat;
+  		background-size: cover;
+		
+	}
+	.glow 
+	{
+  		font-size: 20px;
+  		color: #fff;
+  		text-align: center;
+  		-webkit-animation: glow 1s ease-in-out infinite alternate;
+  		-moz-animation: glow 1s ease-in-out infinite alternate;
+  		animation: glow 1s ease-in-out infinite alternate;
+	}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} 
+	.arrow
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 130px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		/*font-weight: bold;*/
+		font-family: Times New Roman;
+		color: white;
+	}
+	.bandofbrother
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 430px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.daredevil
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 730px; 
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.flash
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 1030px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.mrrobot
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 1330px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.peaky
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 1630px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.sherlock
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 1930px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	.house
+	{
+		position: absolute; 
+		left: 300px; 
+		top: 2230px;  
+		border-collapse: collapse; 
+		width: 500px;
+		height: 200px;
+		font-weight: bold;
+		font-family: Times New Roman;
+		color: white;
+	}
+	
+	</style>
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body class="b">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><div class="glow"> SHOW HUNTER</div></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">ACTION</a></li>
+      <li><a href="#">SCI-FI</a></li>
+      <li><a href="#">COMEDY</a></li>
+      <li><a href="#">ADVENTURE</a></li>
+      <li><a href="#">HORROR</a></li>
+       <li><a href="#">DRAMA</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search" id="myInput">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+	 </form>
+  </div>
+</nav>
+<table border="1">
+	<tr>
+	<td class="a" style="top: 100px; width: 190px; height: 270px;">	
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+      </div>
+
+      <div class="item">
+        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+      </div>
+    
+      <div class="item">
+        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 395px; width: 190px; height: 275px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+      </div>
+
+      <div class="item">
+        <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+      </div>
+    
+      <div class="item">
+        <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 700px; width: 190px;" height: 277px;>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+      </div>
+
+      <div class="item">
+        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 1010px; width: 190px; height: 258px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a> 
+      </div>
+
+      <div class="item">
+        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 1300px; width: 190px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+      </div>
+
+      <div class="item">
+        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	
+	</tr>
+	<tr>
+	<td class="a" style="top: 1610px; width: 190px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+      </div>
+
+      <div class="item">
+        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+      </div>
+    
+      <div class="item">
+        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 1910px; width: 190px; height: 265px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+      </div>
+
+      <div class="item">
+        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+	<tr>
+	<td class="a" style="top: 2210px; width: 190px; height: 175px;">
+		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+      </div>
+
+      <div class="item">
+        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+	</td>
+	</tr>
+</table>
+	<table border="1" class="arrow">
+     <tr>
+        <th>Name</th>
+        <td>Arrow</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>After mastering the skill of archery on a deserted island, multi-millionaire playboy Oliver Queen returns to his city to take on the vigilante persona of Arrow to fight crime and corruption.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>
+        	<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span>
+		</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td><span class="fa fa-star checked"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span>
+			<span class="fa fa-star"></span></td>
+      </tr>
+    </table>
+    <table border="1" class="bandofbrother">
+     <tr>
+        <th>Name</th>
+        <td>Band of Brother</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>The story of Easy Company, 506th Regiment of the 101st Airborne Division from 1942 to the end of World War II. A collection of fifty portraits illustrated by archive footage and recounted in voice.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Drama</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table border="1" class="daredevil">
+     <tr>
+        <th>Name</th>
+        <td>Daredevil</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>The first in a planned series of shows detailing the Marvel universe, "Daredevil" follows Matt Murdock, attorney by day and vigilante by night.</td>
+     </tr>
+     <tr>
+        <th>Cast</th>
+        <td>blah blah</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table border="1"  class="flash">
+     <tr>
+        <th>Name</th>
+        <td>Flash</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Barry Allen, a forensic scientist with the Central City police force, is struck by lightning in a freak accident. When he wakes up after nine months, he discovers that he can achieve great speeds.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table border="1" class="mrrobot">
+     <tr>
+        <th>Name</th>
+        <td>MR. Robot</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Elliot, a cyber-security engineer suffering from anxiety, works for a corporation and hacks felons by night. Panic strikes him after a cryptic anarchist recruits him to destroy the same corporation.</td>
+     </tr>
+     <tr>
+        <th>Cast</th>
+        <td>Drama</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table border="1" class="peaky">
+     <tr>
+        <th>Name</th>
+        <td>Peaky Blinder</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>A dangerous Tommy Shelby leads Peaky Blinders, a criminal gang based in Birmingham in 1919. Chief Inspector Chester Campbell decides to nab him and put an end to the activities of this gang.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Action</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table border="1" class="sherlock">
+     <tr>
+        <th>Name</th>
+        <td>Sherlock</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>In this contemporary version of Sir Arthur Conan Doyle's detective stories, Dr. John Watson is a war vet just home from Afghanistan. He meets the brilliant but eccentric Holmes when the latter, who serves as a consultant to Scotland Yard, advertises for a flatmate.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Drama</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+       <table border="1"  class="house">
+     <tr>
+        <th>Name</th>
+        <td>House Of Cards</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Frank Underwood is a Democrat appointed as the secretary of state. Along with his wife, he sets out on a quest to seek revenge on the people who betrayed him while successfully rising to supremacy.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Drama</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+	<ul class="pagination" style="position: absolute; left: 500px; top: 2480px;" >
+    <li  class="active"><a href="#">1</a></li>
+    <li><a href="2.html">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+ <ul class="pager">
+    <li class="next" style="position: absolute; left: 1000px; top: 2510px;"><a href="2.html">Next</a></li>
+  </ul>
+</body>
+</html>
