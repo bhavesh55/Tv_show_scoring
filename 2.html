@@ -1,147 +1,98 @@
 <!DOCTYPE html>
-
+<html>
 <head>
-	<title>Show Hunter</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel = "icon" href =  
-"logo.jpg" 
-        type = "image/x-icon"> 
 	<style type="text/css">
-	.checked 
-	{
-  		 color: orange;
-	}
-	.a
+		.a
 	{
 		position: absolute;
 		left: 100px;
 	}
 	.b
 	{
-		background-image: url(back10.jpg);
-		background-attachment: fixed;
-  		background-position: center;
-  		background-repeat: no-repeat;
-  		background-size: cover;
-		
+		background-image: url(back.jpg);
 	}
-	.glow 
-	{
-  		font-size: 20px;
-  		color: #fff;
-  		text-align: center;
-  		-webkit-animation: glow 1s ease-in-out infinite alternate;
-  		-moz-animation: glow 1s ease-in-out infinite alternate;
-  		animation: glow 1s ease-in-out infinite alternate;
-	}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-} 
-	.arrow
+	.rick
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 130px;  
+		top: 130px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		/*font-weight: bold;*/
-		font-family: Times New Roman;
-		color: white;
 	}
-	.bandofbrother
+	.stranger
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 430px;  
+		top: 430px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.daredevil
+	.supernatural
 	{
 		position: absolute; 
 		left: 300px; 
 		top: 730px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.flash
+	.walkingdead
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1030px;  
+		top: 1030px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.mrrobot
+	.wire
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1330px;  
+		top: 1330px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.peaky
+	.truedetective
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1630px;  
+		top: 1630px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.sherlock
+	.westworld
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1930px;  
+		top: 1930px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	.house
+	.prison
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 2230px;  
+		top: 2230px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-weight: bold;
-		font-family: Times New Roman;
-		color: white;
 	}
-	
 	</style>
+	<title>Show Hunter</title>
 	 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -152,11 +103,11 @@
 	<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><div class="glow"> SHOW HUNTER</div></a>
+      <a class="navbar-brand" href="#">SHOW HUNTER</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">ACTION</a></li>
+      <li><a href="website.html">Home</a></li>
+      <li><a href="2.html">ACTION</a></li>
       <li><a href="#">SCI-FI</a></li>
       <li><a href="#">COMEDY</a></li>
       <li><a href="#">ADVENTURE</a></li>
@@ -165,7 +116,7 @@
     </ul>
     <form class="navbar-form navbar-left" action="/action_page.php">
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search" id="myInput">
+        <input type="text" class="form-control" placeholder="Search" name="search">
         <div class="input-group-btn">
           <button class="btn btn-default" type="submit">
             <i class="glyphicon glyphicon-search"></i>
@@ -189,15 +140,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+       <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+        <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
+        <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -226,15 +177,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+       <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+        <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+        <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -263,15 +214,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
+        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
       </div>
     </div>
 
@@ -300,15 +251,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a> 
+       <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
+        <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
+        <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a>
       </div>
     </div>
 
@@ -337,15 +288,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="mr.html"><img src="mrrobot.jpg" alt="mrrobot" style="width:100%;"></a>
+        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
       </div>
     </div>
 
@@ -375,15 +326,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+       <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+        <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
+        <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -412,15 +363,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+       <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+        <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
+        <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
       </div>
     </div>
 
@@ -449,15 +400,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+       <a href="prison.html"> <img src="prison.jpg" alt="prison" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+        <a href="prison.html"> <img src="prison.jpg" alt="prison" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
+        <a href="prison.html"> <img src="prison.jpg" alt="prison" style="width:100%;"></a>
       </div>
     </div>
 
@@ -474,68 +425,14 @@
 	</td>
 	</tr>
 </table>
-	<table border="1" class="arrow">
+	<table border="1" class="rick">
      <tr>
         <th>Name</th>
-        <td>Arrow</td>
+        <td>Rick and Morty</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>After mastering the skill of archery on a deserted island, multi-millionaire playboy Oliver Queen returns to his city to take on the vigilante persona of Arrow to fight crime and corruption.</td>
-     </tr>
-     <tr>
-        <th>Category</th>
-        <td>Action</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>
-        	<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-		</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td><span class="fa fa-star checked"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span>
-			<span class="fa fa-star"></span></td>
-      </tr>
-    </table>
-    <table border="1" class="bandofbrother">
-     <tr>
-        <th>Name</th>
-        <td>Band of Brother</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>The story of Easy Company, 506th Regiment of the 101st Airborne Division from 1942 to the end of World War II. A collection of fifty portraits illustrated by archive footage and recounted in voice.</td>
-     </tr>
-     <tr>
-        <th>Category</th>
-        <td>Drama</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>55%</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td>11%</td>
-      </tr>
-    </table>
-    <table border="1" class="daredevil">
-     <tr>
-        <th>Name</th>
-        <td>Daredevil</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>The first in a planned series of shows detailing the Marvel universe, "Daredevil" follows Matt Murdock, attorney by day and vigilante by night.</td>
+        <td>blah blah</td>
      </tr>
      <tr>
         <th>Cast</th>
@@ -550,40 +447,18 @@
         <td>11%</td>
       </tr>
     </table>
-    <table border="1"  class="flash">
+    <table border="1" class="stranger">
      <tr>
-        <th>Name</th>
-        <td>Flash</td>
+        <th width="285px;">Name</th>
+        <td>Stranger Things</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>Barry Allen, a forensic scientist with the Central City police force, is struck by lightning in a freak accident. When he wakes up after nine months, he discovers that he can achieve great speeds.</td>
-     </tr>
-     <tr>
-        <th>Category</th>
-        <td>Action</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>55%</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td>11%</td>
-      </tr>
-    </table>
-    <table border="1" class="mrrobot">
-     <tr>
-        <th>Name</th>
-        <td>MR. Robot</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>Elliot, a cyber-security engineer suffering from anxiety, works for a corporation and hacks felons by night. Panic strikes him after a cryptic anarchist recruits him to destroy the same corporation.</td>
+        <td>blah blah</td>
      </tr>
      <tr>
         <th>Cast</th>
-        <td>Drama</td>
+        <td>blah blah</td>
       </tr>
       <tr>
         <th>positive</th>
@@ -594,18 +469,18 @@
         <td>11%</td>
       </tr>
     </table>
-    <table border="1" class="peaky">
+    <table  class="supernatural">
      <tr>
         <th>Name</th>
-        <td>Peaky Blinder</td>
+        <td>Super Natural</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>A dangerous Tommy Shelby leads Peaky Blinders, a criminal gang based in Birmingham in 1919. Chief Inspector Chester Campbell decides to nab him and put an end to the activities of this gang.</td>
+        <td>blah blah</td>
      </tr>
      <tr>
-        <th>Category</th>
-        <td>Action</td>
+        <th>Cast</th>
+        <td>blah blah</td>
       </tr>
       <tr>
         <th>positive</th>
@@ -616,18 +491,18 @@
         <td>11%</td>
       </tr>
     </table>
-    <table border="1" class="sherlock">
+    <table  class="walkingdead">
      <tr>
         <th>Name</th>
-        <td>Sherlock</td>
+        <td>Walking Dead</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>In this contemporary version of Sir Arthur Conan Doyle's detective stories, Dr. John Watson is a war vet just home from Afghanistan. He meets the brilliant but eccentric Holmes when the latter, who serves as a consultant to Scotland Yard, advertises for a flatmate.</td>
+        <td>blah blah</td>
      </tr>
      <tr>
-        <th>Category</th>
-        <td>Drama</td>
+        <th>Cast</th>
+        <td>blah blah</td>
       </tr>
       <tr>
         <th>positive</th>
@@ -638,18 +513,18 @@
         <td>11%</td>
       </tr>
     </table>
-       <table border="1"  class="house">
+    <table  class="wire">
      <tr>
         <th>Name</th>
-        <td>House Of Cards</td>
+        <td>The Wire</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>Frank Underwood is a Democrat appointed as the secretary of state. Along with his wife, he sets out on a quest to seek revenge on the people who betrayed him while successfully rising to supremacy.</td>
+        <td>blah blah</td>
      </tr>
      <tr>
-        <th>Category</th>
-        <td>Drama</td>
+        <th>Cast</th>
+        <td>blah blah</td>
       </tr>
       <tr>
         <th>positive</th>
@@ -660,15 +535,82 @@
         <td>11%</td>
       </tr>
     </table>
-	<ul class="pagination" style="position: absolute; left: 500px; top: 2480px;" >
-    <li  class="active"><a href="#">1</a></li>
-    <li><a href="2.html">2</a></li>
+    <table  class="truedetective">
+     <tr>
+        <th width="285px;">Name</th>
+        <td>True Detective</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>blah blah</td>
+     </tr>
+     <tr>
+        <th>Cast</th>
+        <td>blah blah</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+    <table  class="westworld">
+     <tr>
+        <th>Name</th>
+        <td>West World</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>blah blah</td>
+     </tr>
+     <tr>
+        <th>Cast</th>
+        <td>blah blah</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+       <table  class="prison">
+     <tr>
+        <th width="285px;">Name</th>
+        <td>Prison Break</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>blah blah</td>
+     </tr>
+     <tr>
+        <th>Cast</th>
+        <td>blah blah</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td>55%</td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td>11%</td>
+      </tr>
+    </table>
+<ul class="pagination" style="position: absolute; left: 500px; top: 2480px;" >
+    <li><a href="website.html">1</a></li>
+    <li class="active"><a href="2.html">2</a></li>
     <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
   </ul>
  <ul class="pager">
-    <li class="next" style="position: absolute; left: 1000px; top: 2510px;"><a href="2.html">Next</a></li>
-  </ul>
+<li class="previous" style="position: absolute; left: 100px; top: 2510px;"><a href="website.html">Previous</a></li>
+ <li class="next" style="position: absolute; left: 1000px; top: 2510px;"><a href="2.html">Next</a></li>
+</ul>
 </body>
 </html>
