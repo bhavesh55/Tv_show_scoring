@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "icon" href =  
+"logo.jpg" 
+        type = "image/x-icon"> 
 	<title>Peaky Blinders</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,6 +12,25 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <style type="text/css">
+     .glow 
+  {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+  }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} 
   	.frame
   	{
   		width: 40%; 
@@ -49,44 +72,125 @@
     height: 300px;
     /*font-weight: bold;*/
     font-family: Times New Roman;
-    color: yellow;
+    color: white;
    /* padding: 10px;
     margin: 10px;*/
     text-align: justify-all;
   }
+   .over
+    {
+      position: absolute;
+      height: 870px;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+        .searchbar
+  {
+    position: absolute;
+    height: 40px;
+    top: 5px;
+    border-radius: 5px;
+  }
+  #myUL li a
+   {
+    border: 1px solid #ddd; 
+    text-align: left;
+    border-radius: 2px;
+    height: 35px;
+    background-color: rgba(0,0,0,0.6); 
+    padding: 10px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: black; 
+    display: block; 
+    }
+    th
+    {
+      width: 100px;
+    }
+  #myUL li a:hover:not(.header)
+   {
+  background-color: #eee;
+   }
   </style>
+  <script>
+function myFunction() {
+  
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myinput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      ul.style.display="";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script src="resultm.json"></script>
   
 </head>
 <body class="b">
+  <div class="over"></div>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SHOW HUNTER</a>
+      <a class="navbar-brand" href="#"><div class="glow"> SHOW HUNTER</div></a>
     </div>
     <ul class="nav navbar-nav">
       <li><a href="website.html">Home</a></li>
-      <li><a href="#">ACTION</a></li>
-      <li><a href="#">SCI-FI</a></li>
-      <li><a href="#">COMEDY</a></li>
-      <li><a href="#">ADVENTURE</a></li>
-      <li><a href="#">HORROR</a></li>
-      <li><a href="#">DRAMA</a></li>
+      <li><a href="action.html">ACTION</a></li>
+      <li><a href="sci.html">SCI-FI</a></li>
+      <li><a href="comedy.html">COMEDY</a></li>
+      <li><a href="adv.html">ADVENTURE</a></li>
+      <li><a href="horror.html">HORROR</a></li>
+      <li><a href="drama.html">DRAMA</a></li>
     </ul>
-    <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search" id="myInput">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-	 </form>
+    <form>
+      <div>
+        <input type="text" placeholder="Search" name="search" id="myinput" onkeyup="myFunction()" class="searchbar">
+        <ul id="myUL" style="position: absolute;left: 730px; top: 50px; width: 190px;" >
+         <li style="display: none"><a href="arrow.html" style="color: white">ARROW</a></li>
+         <li style="display: none"><a href="band.html" style="color: white">BAND OF BROTHERS</a></li>
+
+         <li style="display: none"><a href="daredevil.html" style="color: white">DAREDEVIL</a></li>
+         <li style="display: none"><a href="flash.html" style="color: white">FLASH</a></li>
+
+         <li style="display: none"><a href="mr.html" style="color: white">MR. ROBOT</a></li>
+         <li style="display: none"><a href="peaky.html" style="color: white">PEAKY BLINDERS</a></li>
+         <li style="display: none"><a href="sherlock.html" style="color: white">SHERLOCK</a></li>
+         <li style="display: none"><a href="rick.html" style="color: white">RICK AND MORTY</a></li>
+          <li style="display: none"><a href="house.html" style="color: white">HOUSE OF CARDS</a></li>
+         <li style="display: none"><a href="stranger.html" style="color: white">STRANGER THINGS</a></li>
+         <li style="display: none"><a href="suit.html" style="color: white">SUITS</a></li>
+         <li style="display: none"><a href="super.html" style="color: white">SUPER NATURAL</a></li>
+         <li style="display: none"><a href="walking.html" style="color: white">THE WALKING DEAD</a></li>
+         <li style="display: none"><a href="viking.html" style="color: white">VIKINGS</a></li>
+         <li style="display: none"><a href="wire.html" style="color: white">THE WIRE</a></li>
+         <li style="display: none"><a href="true.html" style="color: white">TRUE DETECTIVE</a></li>
+         <li style="display: none"><a href="west.html" style="color: white">WEST WORLD</a></li>
+         <li style="display: none"><a href="prison.html" style="color: white">PRISON BREAK</a></li>
+         <li style="display: none"><a href="game.html" style="color: white">GAME OF THRONES</a></li>
+         <li style="display: none"><a href="bird.html" style="color: white">BIRD BOX</a></li>
+
+
+        </ul>
+      </div>  
+   </form>
   </div>
 </nav>
 <iframe class="frame"  src="https://www.youtube.com/embed/EM12mcTEI88" frameborder="0" allowfullscreen>
 </iframe>
-<table border="1" class="peaky">
+<table class="peaky">
      <tr>
         <th>Name</th>
         <td>Peaky Blinder</td>
@@ -101,35 +205,14 @@
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="1"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="2">11%</td>
       </tr>
     </table>
-    <table border="1" class="sherlock">
-     <tr>
-        <th>Name</th>
-        <td>Sherlock</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>In this contemporary version of Sir Arthur Conan Doyle's detective stories, Dr. John Watson is a war vet just home from Afghanistan. He meets the brilliant but eccentric Holmes when the latter, who serves as a consultant to Scotland Yard, advertises for a flatmate.</td>
-     </tr>
-     <tr>
-        <th>Category</th>
-        <td>Drama</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>55%</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td>11%</td>
-      </tr>
-    </table>
+   
 <p class="para">Peaky Blinders is a British crime drama television series primarily set in Birmingham, England in the aftermath of World War I. The series, which was created by Steven Knight and produced by Caryn Mandabach Productions, Screen Yorkshire and Tiger Aspect Productions, follows the exploits of the Shelby crime family. Screen Yorkshire provided funding for the production through the Yorkshire Content Fund. It was the first production to receive funding from the Yorkshire Content Fund, which in turn made certain the majority of the show was filmed in Yorkshire as part of the deal.
 
 Cillian Murphy stars as Tommy Shelby, the gang's leader, with Sam Neill as Chester Campbell, a commissioned detective from Belfast who is tasked with suppressing the gang.The fictional gang is loosely based on the Peaky Blinders, a real 19th century urban youth gang who were active in the city from the 1890s and were believed to sew razor blades into their caps.
@@ -138,5 +221,10 @@ The first series aired on BBC Two on 13 September 2013 and ran for six episodes.
 
 In May 2018, after their Drama Series win at the BAFTA TV Awards, Knight confirmed his "ambition of making it a story of a family between two wars, and by ending it with the first air raid siren in Birmingham", which was 25 June 1940.He also confirmed that it would take another three series (seven in total) to complete the story up to that point.</p>
 <img src="peaky1.jpg" class="tab">
+<script type="text/javascript">
+    var value_print = JSON.parse(data);
+       document.getElementById(1).innerHTML = value_print[5].Positive + "%";
+       document.getElementById(2).innerHTML = value_print[5].Negative + "%";
+  </script>
 </body>
 </html>

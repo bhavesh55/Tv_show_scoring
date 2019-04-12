@@ -5,13 +5,34 @@
   <link rel = "icon" href =  
 "logo.jpg" 
         type = "image/x-icon"> 
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<title>Arrow</title>
+	<title>Rick And Morty</title>
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="resultm.json"></script>
+   <script>
+function myFunction() {
+  
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myinput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      ul.style.display="";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
   <style type="text/css">
      .glow 
   {
@@ -32,10 +53,6 @@
     text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
   }
 } 
-  	.checked 
-	{
-  		 color: orange;
-	}
   	.frame
   	{
   		width: 40%; 
@@ -54,22 +71,21 @@
   	}
   	.b
 	{
-		 background-image: url(ar_back.jpg);
+	    background-image: url(back10.jpg);
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
-		
+      background-size: cover;	
 	} 
 	.tab
 	{
 		position: absolute;
-		top: 700px;
+		top: 640px;
 		left: 50px;
 	}
-	.arrow
-	{
-		position: absolute; 
+  .Stranger
+  {
+    position: absolute; 
     left: 600px; 
     top: 120px;  
     border-collapse: collapse; 
@@ -81,17 +97,23 @@
    /* padding: 10px;
     margin: 10px;*/
     text-align: justify-all;
-	}
-  .over
+    /*background-color: lightblue;*/
+  }
+  th
+  {
+    width: 100px;
+  }
+   .over
     {
       position: absolute;
-      height: 1000px;
+      height: 800px;
       top: 0px;
       left: 0px;
       width: 100%;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.7);
     }
-      .searchbar
+    
+     .searchbar
   {
     position: absolute;
     height: 40px;
@@ -120,28 +142,6 @@
   background-color: #eee;
    }
   </style>
-  <script>
-function myFunction() {
-  
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myinput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
-
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-      ul.style.display="";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script>
-<script src="resultm.json"></script>
   
 </head>
 <body class="b">
@@ -171,8 +171,8 @@ function myFunction() {
          <li style="display: none"><a href="mr.html" style="color: white">MR. ROBOT</a></li>
          <li style="display: none"><a href="peaky.html" style="color: white">PEAKY BLINDERS</a></li>
          <li style="display: none"><a href="sherlock.html" style="color: white">SHERLOCK</a></li>
-         <li style="display: none"><a href="rick.html" style="color: white">RICK AND MORTY</a></li>
           <li style="display: none"><a href="house.html" style="color: white">HOUSE OF CARDS</a></li>
+         <li style="display: none"><a href="rick.html" style="color: white">RICK AND MORTY</a></li>
          <li style="display: none"><a href="stranger.html" style="color: white">STRANGER THINGS</a></li>
          <li style="display: none"><a href="suit.html" style="color: white">SUITS</a></li>
          <li style="display: none"><a href="super.html" style="color: white">SUPER NATURAL</a></li>
@@ -188,20 +188,20 @@ function myFunction() {
    </form>
   </div>
 </nav>
-<iframe class="frame"  src="https://www.youtube.com/embed/XQS7JkQmlx8" frameborder="0" allowfullscreen>
+<iframe class="frame"  src="https://www.youtube.com/embed/WNhH00OIPP0" frameborder="0" allowfullscreen>
 </iframe>
-<table class="arrow">
+<table class="Stranger">
      <tr>
         <th>Name</th>
-        <td>Arrow</td>
+        <td>Rick And Morty</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>After mastering the skill of archery on a deserted island, multi-millionaire playboy Oliver Queen returns to his city to take on the vigilante persona of Arrow to fight crime and corruption.</td>
+        <td>Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon.</td>
      </tr>
      <tr>
         <th>Category</th>
-        <td>Action</td>
+        <td>SCI-FI</td>
       </tr>
       <tr>
         <th>positive</th>
@@ -212,16 +212,14 @@ function myFunction() {
         <td id="2"></td>
       </tr>
     </table>
-<p class="para">Arrow is an American television series, developed by Greg Berlanti, Marc Guggenheim and Andrew Kreisberg, based on the DC Comics character Green Arrow. The series premiered in the United States on October 10, 2012 for The CW television network. The first six seasons have been released on DVD to Regions 1, 2 and 4 and on Blu-ray to Regions A and B.
+<p class="para">The series follows Rick Sanchez an alcoholic super-scientist, and his easily distressed yet good-hearted grandson, Morty Smith, on their adventures to alternate dimensions and planets. These adventures commonly cause trouble for Morty's family, who are often caught up in the mayhem.<br><br>
 
-Arrow follows billionaire playboy Oliver Queen (Stephen Amell), who, after five years of being stranded on a hostile island, returns home to his mother, Moira Queen (Susanna Thompson) and sister, Thea Queen (Willa Holland) and becomes a bow and arrow-wielding vigilante. He is initially aided by his friends, John Diggle (David Ramsey) and Felicity Smoak (Emily Bett Rickards), and later aspiring vigilantes Roy Harper (Colton Haynes), Ray Palmer (Brandon Routh), Curtis Holt (Echo Kellum), Rene Ramirez (Rick Gonzalez), Evelyn Sharp (Madison McLaughlin), Rory Regan (Joe Dinicol), and Dinah Drake (Juliana Harkavy) join them. In addition, Queen's team receives help from the Lance family; Laurel (Katie Cassidy), Sara (Caity Lotz), and Quentin (Paul Blackthorne), sharing the goal of bringing justice to Starling City (later, Star City). The series also featured flashbacks in most episodes in the first five seasons to the time Queen was missing, and how his experiences there shaped him into the man who returned home to fight crime.
-
-On April 2, 2018, the CW renewed the series for a seventh season, which premiered on October 15, 2018.On January 31, 2019, The CW renewed the series for an eighth season, which is set to be the final season of the series, with an abbreviated ten-episode season. As of March 11, 2019, 153 episodes of Arrow have aired.</p>
-<img src="arrow1.jpg" class="tab">
+The series premiered on December 2, 2013 on Cartoon Network's late-night programming block Adult Swim. As of October 1, 2017, 31 episodes of Rick and Morty have aired, concluding the third season. On May 10, 2018, Adult Swim announced a long-term deal with the creators, ordering 70 new episodes of Rick and Morty over an unknown number of seasons.</p>
+<img src="rick1.jpg" class="tab">
  <script type="text/javascript">
     var value_print = JSON.parse(data);
-       document.getElementById(1).innerHTML = value_print[0].Positive + "%";
-       document.getElementById(2).innerHTML = value_print[0].Negative + "%";
+       document.getElementById(1).innerHTML = value_print[8].Positive + "%";
+       document.getElementById(2).innerHTML = value_print[8].Negative + "%";
   </script>
 </body>
 </html>

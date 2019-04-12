@@ -2,187 +2,117 @@
 
 <head>
 	<title>Show Hunter</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel = "icon" href ="logo.jpg" type = "image/x-icon"> 
-   <script>
-function myFunction() {
-  
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myinput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-      ul.style.display="";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-</script>
-<script src="resultm.json"></script>
- 
 	<style type="text/css">
 	
 	.a
 	{
 		position: absolute;
 		left: 100px;
-    box-shadow: -10px 10px 45px -5px rgba(255,0,0,0.5);
-    -webkit-transition:box-shadow 2s;
 	}
-  .a:hover
-  {
-    position: absolute;
-    left: 100px;
-    box-shadow: -10px 10px 45px 10px rgba(192,20,60,0.9);
-    
-  }
 	.b
 	{
-		background-image: url(back10.jpg);
-		background-attachment: fixed;
-  		background-position: center;
-  		background-repeat: no-repeat;
-  		background-size: cover;
-      /*background-color: rgba(255,255,255,0.5);*/
+		min-height:100%;
+  		background:linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)),url(back.jpg);
+ 	 	background-size:cover;
 		
-	}
-  .over
-    {
-      position: absolute;
-      height: 2550px;
-      top: 0px;
-      left: 0px;
-      width: 100%;
-      background-color: rgba(0,0,0,0.4);
-    }
-	.glow 
-	{
-  		font-size: 20px;
-  		color: #fff;
-  		text-align: center;
-  		-webkit-animation: glow 1s ease-in-out infinite alternate;
-  		-moz-animation: glow 1s ease-in-out infinite alternate;
-  		animation: glow 1s ease-in-out infinite alternate;
-	}
-
-@-webkit-keyframes glow {
-  from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
-  }
-  
-  to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
-  }
-} 
+	} 
 	.arrow
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 130px;  
+		top: 130px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		/*font-weight: bold;*/
-		font-family: Times New Roman;
-		color: white;
 	}
 	.bandofbrother
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 430px;  
+		top: 430px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		
-		font-family: Times New Roman;
-		color: white;
 	}
 	.daredevil
 	{
 		position: absolute; 
 		left: 300px; 
 		top: 730px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		
-		font-family: Times New Roman;
-		color: white;
 	}
 	.flash
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1030px;  
+		top: 1030px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-family: Times New Roman;
-		color: white;
 	}
 	.mrrobot
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1330px;  
+		top: 1330px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-family: Times New Roman;
-		color: white;
 	}
 	.peaky
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1630px;  
+		top: 1630px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		
-		font-family: Times New Roman;
-		color: white;
 	}
 	.sherlock
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 1930px;  
+		top: 1930px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-family: Times New Roman;
-		color: white;
 	}
 	.house
 	{
 		position: absolute; 
 		left: 300px; 
-		top: 2230px;  
+		top: 2230px; 
+		color: white; 
 		border-collapse: collapse; 
 		width: 500px;
 		height: 200px;
-		font-family: Times New Roman;
-		color: white;
 	}
-  .searchbar
-  {
-    position: absolute;
-    height: 40px;
-    top: 5px;
-    border-radius: 5px;
+  #myinput{
+    background-image: url('/css/searchicon.png'); 
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px; 
+    border: 1px solid #ddd; 
+    border-radius: 2px;
+    margin-bottom: 16px;
   }
-  #myUL li a
-   {
+  #myUL {
+    list-style-type: none;
+    background-color: rgba(0,0,0,0);
+    width: 255px;
+    padding:0px;
+    margin: 0px;
+  }
+
+  #myUL li a {
     border: 1px solid #ddd; 
     text-align: left;
     border-radius: 2px;
@@ -193,70 +123,57 @@ function myFunction() {
     font-size: 18px; 
     color: black; 
     display: block; 
-    }
-    th
-    {
-      width: 100px;
-    }
-  #myUL li a:hover:not(.header)
-   {
-  background-color: #eee;
-	 }
+  }
+  .searchbar
+  {
+    position: absolute;
+    height: 40px;
+    top: 10px;
+  }
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
 	</style>
-	 <meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body class="b">
-  <div class="over"></div>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><div class="glow"> SHOW HUNTER</div></a>
+      <a class="navbar-brand" href="#">SHOW HUNTER</a>
     </div>
     <ul class="nav navbar-nav">
-       <li class="active"><a href="website.html">Home</a></li>
-      <li><a href="action.html">ACTION</a></li>
-      <li><a href="sci.html">SCI-FI</a></li>
-      <li><a href="comedy.html">COMEDY</a></li>
-      <li><a href="adv.html">ADVENTURE</a></li>
-      <li><a href="horror.html">HORROR</a></li>
-      <li><a href="drama.html">DRAMA</a></li>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">ACTION</a></li>
+      <li><a href="#">SCI-FI</a></li>
+      <li><a href="#">COMEDY</a></li>
+      <li><a href="#">ADVENTURE</a></li>
+      <li><a href="#">HORROR</a></li>
     </ul>
+ 
     <form>
       <div>
         <input type="text" placeholder="Search" name="search" id="myinput" onkeyup="myFunction()" class="searchbar">
-        <ul id="myUL" style="position: absolute;left: 730px; top: 50px; width: 190px;" >
-         <li style="display: none"><a href="arrow.html" style="color: white">ARROW</a></li>
-         <li style="display: none"><a href="band.html" style="color: white">BAND OF BROTHERS</a></li>
+        <ul id="myUL" style="position: absolute;left: 674px; top: 50px; width: 235px;" >
+         <li style="display: none"><a href="arrow.html" >arrow</a></li>
+         <li style="display: none"><a href="#" >Agnes</a></li>
 
-         <li style="display: none"><a href="daredevil.html" style="color: white">DAREDEVIL</a></li>
-         <li style="display: none"><a href="flash.html" style="color: white">FLASH</a></li>
+         <li style="display: none"><a href="#">Billy</a></li>
+         <li style="display: none"><a href="#">Bob</a></li>
 
-         <li style="display: none"><a href="mr.html" style="color: white">MR. ROBOT</a></li>
-         <li style="display: none"><a href="peaky.html" style="color: white">PEAKY BLINDERS</a></li>
-         <li style="display: none"><a href="sherlock.html" style="color: white">SHERLOCK</a></li>
-         <li style="display: none"><a href="rick.html" style="color: white">RICK AND MORTY</a></li>
-         <li style="display: none"><a href="stranger.html" style="color: white">STRANGER THINGS</a></li>
-         <li style="display: none"><a href="suit.html" style="color: white">SUITS</a></li>
-         <li style="display: none"><a href="super.html" style="color: white">SUPER NATURAL</a></li>
-         <li style="display: none"><a href="walking.html" style="color: white">THE WALKING DEAD</a></li>
-         <li style="display: none"><a href="viking.html" style="color: white">VIKINGS</a></li>
-         <li style="display: none"><a href="wire.html" style="color: white">THE WIRE</a></li>
-         <li style="display: none"><a href="true.html" style="color: white">TRUE DETECTIVE</a></li>
-         <li style="display: none"><a href="west.html" style="color: white">WEST WORLD</a></li>
-         <li style="display: none"><a href="prison.html" style="color: white">PRISON BREAK</a></li>
-         <li style="display: none"><a href="game.html" style="color: white">GAME OF THRONES</a></li>
-         <li style="display: none"><a href="bird.html" style="color: white">BIRD BOX</a></li>
-
-
+         <li style="display: none"><a href="#">Calvin</a></li>
+         <li style="display: none"><a href="#">Christina</a></li>
+         <li style="display: none"><a href="#">Cindy</a></li>
         </ul>
       </div>  
-   </form>
+	 </form>
   </div>
-</nav>
+  </nav>
 <table border="1">
 	<tr>
 	<td class="a" style="top: 100px; width: 190px; height: 270px;">	
@@ -275,11 +192,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="arrow.html"><img src="arrow2.jpg" alt="arrow" style="width:100%;"></a> 
+        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="arrow.html"><img src="arrow3.png" alt="arrow" style="width:100%;"></a> 
+        <a href="arrow.html"><img src="arrow.jpg" alt="arrow" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -308,15 +225,15 @@ function myFunction() {
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="band.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
+       <a href="bob.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="band.html"><img src="bandofbrother2.jpg" alt="bandofbrother" style="width:100%;"></a> 
+        <a href="bob.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="band.html"><img src="bandofbrother3.jpg" alt="bandofbrother" style="width:100%;"></a> 
+        <a href="bob.html"><img src="bandofbrother.jpg" alt="bandofbrother" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -329,7 +246,7 @@ function myFunction() {
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+    </div>
 	</td>
 	</tr>
 	<tr>
@@ -349,11 +266,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="daredevil.html"><img src="daredevil2.jpg" alt="daredevil" style="width:100%;"></a>
+        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="daredevil.html"><img src="daredevil3.jpg" alt="daredevil" style="width:100%;"></a>
+        <a href="daredevil.html"><img src="daredevil.jpg" alt="daredevil" style="width:100%;"></a>
       </div>
     </div>
 
@@ -386,11 +303,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="flash.html"><img src="flash2.jpg" alt="flash" style="width:100%;"></a>
+        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="flash.html"><img src="flash3.jpg" alt="flash" style="width:100%;"></a>
+        <a href="flash.html"><img src="flash.jpg" alt="flash" style="width:100%;"></a>
       </div>
     </div>
 
@@ -461,11 +378,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="peaky.html"><img src="peaky blinder2.jpg" alt="peaky blinder" style="width:100%;"></a> 
+        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="peaky.html"><img src="peaky blinder3.jpg" alt="peaky blinder" style="width:100%;"></a> 
+        <a href="peaky.html"><img src="peaky blinder.jpg" alt="peaky blinder" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -498,11 +415,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="sherlock.html"> <img src="sherlock2.jpg" alt="sherlock" style="width:100%;"></a>
+        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="sherlock.html"> <img src="sherlock3.jpg" alt="sherlock" style="width:100%;"></a>
+        <a href="sherlock.html"> <img src="sherlock.jpg" alt="sherlock" style="width:100%;"></a>
       </div>
     </div>
 
@@ -535,11 +452,11 @@ function myFunction() {
       </div>
 
       <div class="item">
-        <a href="house.html"> <img src="houseofcard2.jpg" alt="houseofcard" style="width:100%;"></a>
+        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="house.html"> <img src="houseofcard3.jpg" alt="houseofcard" style="width:100%;"></a>
+        <a href="house.html"> <img src="houseofcard.jpg" alt="houseofcard" style="width:100%;"></a>
       </div>
     </div>
 
@@ -556,7 +473,7 @@ function myFunction() {
 	</td>
 	</tr>
 </table>
-	<table  class="arrow">
+	<table border="1" class="arrow">
      <tr>
         <th>Name</th>
         <td>Arrow</td>
@@ -566,19 +483,19 @@ function myFunction() {
         <td>After mastering the skill of archery on a deserted island, multi-millionaire playboy Oliver Queen returns to his city to take on the vigilante persona of Arrow to fight crime and corruption.</td>
      </tr>
      <tr>
-        <th>Category</th>
+        <th>Categoryt</th>
         <td>Action</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td id="1"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="2"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table class="bandofbrother">
+    <table border="1" class="bandofbrother">
      <tr>
         <th>Name</th>
         <td>Band of Brother</td>
@@ -593,14 +510,14 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="3"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="4"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table  class="daredevil">
+    <table border="1" class="daredevil">
      <tr>
         <th>Name</th>
         <td>Daredevil</td>
@@ -610,19 +527,19 @@ function myFunction() {
         <td>The first in a planned series of shows detailing the Marvel universe, "Daredevil" follows Matt Murdock, attorney by day and vigilante by night.</td>
      </tr>
      <tr>
-        <th>Category</th>
-        <td>Action</td>
+        <th>Cast</th>
+        <td>blah blah</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td id="5"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="6"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table   class="flash">
+    <table border="1"  class="flash">
      <tr>
         <th>Name</th>
         <td>Flash</td>
@@ -637,14 +554,14 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="7"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="8"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table class="mrrobot">
+    <table border="1" class="mrrobot">
      <tr>
         <th>Name</th>
         <td>MR. Robot</td>
@@ -659,14 +576,14 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="9"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="10"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table  class="peaky">
+    <table border="1" class="peaky">
      <tr>
         <th>Name</th>
         <td>Peaky Blinder</td>
@@ -681,14 +598,14 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="11"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="12"></td>
+        <td>11%</td>
       </tr>
     </table>
-    <table  class="sherlock">
+    <table border="1" class="sherlock">
      <tr>
         <th>Name</th>
         <td>Sherlock</td>
@@ -703,14 +620,14 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="13"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="14"></td>
+        <td>11%</td>
       </tr>
     </table>
-       <table   class="house">
+       <table border="1"  class="house">
      <tr>
         <th>Name</th>
         <td>House Of Cards</td>
@@ -725,33 +642,45 @@ function myFunction() {
       </tr>
       <tr>
         <th>positive</th>
-        <td id="15"></td>
+        <td>55%</td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td id="16"></td>
+        <td>11%</td>
       </tr>
     </table>
 	<ul class="pagination" style="position: absolute; left: 500px; top: 2480px;" >
     <li  class="active"><a href="#">1</a></li>
     <li><a href="2.html">2</a></li>
-    <!-- <li><a href="#">3</a></li>
+    <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li> -->
+    <li><a href="#">5</a></li>
   </ul>
  <ul class="pager">
     <li class="next" style="position: absolute; left: 1000px; top: 2510px;"><a href="2.html">Next</a></li>
   </ul>
-  <script type="text/javascript">
-    var value_print = JSON.parse(data);
-    var i=1,t=1,g=2;
-     for(i in value_print){
-       document.getElementById(t).innerHTML = value_print[i].Positive + "%";
-       document.getElementById(g).innerHTML = value_print[i].Negative + "%";
-     i++;
-     t= t+2;
-     g = g+2;
+ <script>
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myinput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      ul.style.display="";
+    } else {
+      li[i].style.display = "none";
     }
-  </script>
+  }
+}
+</script>
+</script>
 </body>
 </html>

@@ -1,135 +1,274 @@
 <!DOCTYPE html>
-<html>
+
 <head>
-	<style type="text/css">
-		.a
-	{
-		position: absolute;
-		left: 100px;
-	}
-	.b
-	{
-		background-image: url(back.jpg);
-	}
-	.rick
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 130px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.stranger
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 430px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.supernatural
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 730px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.walkingdead
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 1030px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.wire
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 1330px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.truedetective
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 1630px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.westworld
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 1930px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	.prison
-	{
-		position: absolute; 
-		left: 300px; 
-		top: 2230px; 
-		color: white; 
-		border-collapse: collapse; 
-		width: 500px;
-		height: 200px;
-	}
-	</style>
-	<title>Show Hunter</title>
-	 <meta charset="utf-8">
+  <title>Show Hunter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel = "icon" href ="logo.jpg" type = "image/x-icon"> 
+   <script>
+function myFunction() {
+  
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myinput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+      ul.style.display="";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+<script src="resultm.json"></script>
+ 
+  <style type="text/css">
+  .checked 
+  {
+       color: orange;
+  }
+  .a
+  {
+    position: absolute;
+    left: 100px;
+    box-shadow: -10px 10px 45px -5px rgba(255,0,0,0.5);
+    -webkit-transition:box-shadow 2s;
+  }
+  .a:hover
+  {
+    position: absolute;
+    left: 100px;
+    box-shadow: -10px 10px 45px 10px rgba(192,20,60,0.9);
+    
+  }
+  .b
+  {
+    background-image: url(back10.jpg);
+    background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      /*background-color: rgba(255,255,255,0.5);*/
+    
+  }
+  .over
+    {
+      position: absolute;
+      height: 2550px;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+  .glow 
+  {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+  }
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+} 
+ .rick
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 130px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .stranger
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 430px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .suits
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 730px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .supernatural
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 1030px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .thewalkingdead
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 1330px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .vikings
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 1630px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .thewire
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 1930px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .truedetective
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 2230px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .prisionbreak
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 2530px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .gameofthrones
+  {
+    position: absolute; 
+    left: 300px; 
+    top: 2830px; 
+    color: white; 
+    border-collapse: collapse; 
+    width: 500px;
+    height: 200px;
+  }
+  .searchbar
+  {
+    position: absolute;
+    height: 40px;
+    top: 5px;
+    border-radius: 5px;
+  }
+  #myUL li a
+   {
+    border: 1px solid #ddd; 
+    text-align: left;
+    border-radius: 2px;
+    height: 35px;
+    background-color: rgba(0,0,0,0.6); 
+    padding: 10px; 
+    text-decoration: none; 
+    font-size: 18px; 
+    color: black; 
+    display: block; 
+    }
+    th
+    {
+      width: 100px;
+    }
+  #myUL li a:hover:not(.header)
+   {
+  background-color: #eee;
+   }
+  </style>
+   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body class="b">
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="over"></div>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">SHOW HUNTER</a>
+      <a class="navbar-brand" href="#"><div class="glow"> SHOW HUNTER</div></a>
     </div>
     <ul class="nav navbar-nav">
-      <li><a href="website.html">Home</a></li>
-      <li><a href="2.html">ACTION</a></li>
+      <li class="active"><a href="website.html">Home</a></li>
+      <li><a href="#">ACTION</a></li>
       <li><a href="#">SCI-FI</a></li>
       <li><a href="#">COMEDY</a></li>
       <li><a href="#">ADVENTURE</a></li>
       <li><a href="#">HORROR</a></li>
        <li><a href="#">DRAMA</a></li>
     </ul>
-    <form class="navbar-form navbar-left" action="/action_page.php">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search" name="search">
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
-        </div>
-      </div>
-	 </form>
+    <form>
+      <div>
+        <input type="text" placeholder="Search" name="search" id="myinput" onkeyup="myFunction()" class="searchbar">
+        <ul id="myUL" style="position: absolute;left: 730px; top: 50px; width: 190px;" >
+         <li style="display: none"><a href="arrow.html" style="color: white">ARROW</a></li>
+         <li style="display: none"><a href="band.html" style="color: white">BAND OF BROTHERS</a></li>
+
+         <li style="display: none"><a href="daredevil.html" style="color: white">DAREDEVIL</a></li>
+         <li style="display: none"><a href="flash.html" style="color: white">FLASH</a></li>
+
+         <li style="display: none"><a href="mr.html" style="color: white">MR. ROBOT</a></li>
+         <li style="display: none"><a href="peaky.html" style="color: white">PEAKY BLINDERS</a></li>
+         <li style="display: none"><a href="sherlock.html" style="color: white">SHERLOCK</a></li>
+         <li style="display: none"><a href="" style="color: white">RICK AND MORTY</a></li>
+         <li style="display: none"><a href="stranger.html" style="color: white">STRANGER THINGS</a></li>
+         <li style="display: none"><a href="suit.html" style="color: white">SUITS</a></li>
+         <li style="display: none"><a href="super.html" style="color: white">SUPER NATURAL</a></li>
+         <li style="display: none"><a href="walking.html" style="color: white">THE WALKING DEAD</a></li>
+         <li style="display: none"><a href="viking.html" style="color: white">VIKINGS</a></li>
+         <li style="display: none"><a href="wire.html" style="color: white">THE WIRE</a></li>
+         <li style="display: none"><a href="true.html" style="color: white">TRUE DETECTIVE</a></li>
+         <li style="display: none"><a href="west.html" style="color: white">WEST WORLD</a></li>
+         <li style="display: none"><a href="prison.html" style="color: white">PRISON BREAK</a></li>
+         <li style="display: none"><a href="game.html" style="color: white">GAME OF THRONES</a></li>
+        </ul>
+      </div>  
+   </form>
   </div>
 </nav>
 <table border="1">
-	<tr>
-	<td class="a" style="top: 100px; width: 190px; height: 270px;">	
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <tr>
+  <td class="a" style="top: 100px; width: 190px; height: 270px;"> 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -140,15 +279,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
+       <a href="rick.html"><img src="rickandmorty.jpg" alt="arrow" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
+        <a href="rick.html"><img src="rickandmorty2.jpg" alt="arrow" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="rick.html"><img src="rickandmorty.jpg" alt="rickandmorty" style="width:100%;"></a> 
+        <a href="rick.html"><img src="rickandmorty3.jpg" alt="arrow" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -162,11 +301,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 395px; width: 190px; height: 275px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 395px; width: 190px; height: 275px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -177,15 +316,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
+       <a href="stranger.html"><img src="stranger.jpg" alt="strangerthings" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
+        <a href="stranger.html"><img src="stanger3.jpg" alt="strangerthings" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="stranger.html"><img src="stranger.jpg" alt="stranger things" style="width:100%;"></a> 
+        <a href="stranger.html"><img src="stranger.jpg" alt="strangerthings" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -199,11 +338,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 700px; width: 190px;" height: 277px;>
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 700px; width: 190px;" height: 277px;>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -214,15 +353,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
+        <a href="suit.html"><img src="suits.jpg" alt="suits" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
+        <a href="suit.html"><img src="suits2.jpg" alt="suits" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a>
+        <a href="suit.html"><img src="suits.jpg" alt="suits" style="width:100%;"></a>
       </div>
     </div>
 
@@ -236,11 +375,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 1010px; width: 190px; height: 258px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 1010px; width: 190px; height: 258px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -251,15 +390,52 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a> 
+       <a href="super.html"><img src="supernatural.jpg" alt="supernatural" style="width:100%;"></a> 
       </div>
 
       <div class="item">
+        <a href="super.html"><img src="supernatural2.jpg" alt="supernatural" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="super.html"><img src="supernatural3.jpg" alt="supernatural" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 1300px; width: 190px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
         <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a>
       </div>
+
+      <div class="item">
+        <a href="walking.html"><img src="walkingdead2.jpg" alt="walkingdead" style="width:100%;"></a>
+      </div>
     
       <div class="item">
-        <a href="walking.html"><img src="walkingdead.jpg" alt="walkingdead" style="width:100%;"></a>
+        <a href="walking.html"><img src="walkingdead3.jpg" alt="walkingdead" style="width:100%;"></a>
       </div>
     </div>
 
@@ -273,11 +449,12 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 1300px; width: 190px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  
+  </tr>
+  <tr>
+  <td class="a" style="top: 1610px; width: 190px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -288,15 +465,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
+       <a href="viking.html"><img src="viking.jpg" alt="viking" style="width:100%;"></a> 
       </div>
 
       <div class="item">
-        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
+        <a href="viking.html"><img src="viking2.jpg" alt="viking" style="width:100%;"></a> 
       </div>
     
       <div class="item">
-        <a href="wire.html"><img src="wire.jpg" alt="wire" style="width:100%;"></a>
+        <a href="viking.html"><img src="viking3.jpg" alt="viking" style="width:100%;"></a> 
       </div>
     </div>
 
@@ -310,12 +487,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	
-	</tr>
-	<tr>
-	<td class="a" style="top: 1610px; width: 190px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 1910px; width: 190px; height: 265px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -326,15 +502,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
+       <a href="wire.html"> <img src="wire.jpg" alt="wire" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
+        <a href="wire.html"> <img src="wire2.jpg" alt="wire" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="truedetective.html"><img src="true detective.jpg" alt="truedetective" style="width:100%;"></a> 
+        <a href="wire.html"> <img src="wire3.jpg" alt="wire" style="width:100%;"></a>
       </div>
     </div>
 
@@ -348,11 +524,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 1910px; width: 190px; height: 265px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 2210px; width: 190px; height: 175px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -363,15 +539,15 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-       <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
+       <a href="true.html"> <img src="true detective.jpg" alt="true detective" style="width:100%;"></a>
       </div>
 
       <div class="item">
-        <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
+        <a href="true.html"> <img src="true detective2.jpg" alt="true detective" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="westworld.html"> <img src="westworld.jpg" alt="westworld" style="width:100%;"></a>
+        <a href="true.html"> <img src="true detective3.jpg" alt="true detective" style="width:100%;"></a>
       </div>
     </div>
 
@@ -385,11 +561,11 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
-	<tr>
-	<td class="a" style="top: 2210px; width: 190px; height: 175px;">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 2510px; width: 190px; height: 175px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -404,11 +580,11 @@
       </div>
 
       <div class="item">
-        <a href="prison.html"> <img src="prison.jpg" alt="prison" style="width:100%;"></a>
+        <a href="prison.html"> <img src="prison2.jpg" alt="prison" style="width:100%;"></a>
       </div>
     
       <div class="item">
-        <a href="prison.html"> <img src="prison.jpg" alt="prison" style="width:100%;"></a>
+        <a href="prison.html"> <img src="prison3.jpg" alt="prison" style="width:100%;"></a>
       </div>
     </div>
 
@@ -422,195 +598,288 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
-	</td>
-	</tr>
+  </td>
+  </tr>
+  <tr>
+  <td class="a" style="top: 2810px; width: 190px; height: 175px;">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+       <a href="game.html"> <img src="got.jpg" alt="got" style="width:100%;"></a>
+      </div>
+
+      <div class="item">
+        <a href="game.html"> <img src="got2.jpg" alt="got" style="width:100%;"></a>
+      </div>
+    
+      <div class="item">
+        <a href="game.html"> <img src="got3.jpg" alt="got" style="width:100%;"></a>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </td>
+  </tr>
 </table>
-	<table border="1" class="rick">
+  <table  class="rick">
      <tr>
         <th>Name</th>
         <td>Rick and Morty</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>Rick and Morty is an American adult animated science fiction sitcom created by Justin Roiland and Dan Harmon.</td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>SCI-FI</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="1"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="2"></td>
       </tr>
     </table>
-    <table border="1" class="stranger">
+    <table class="stranger">
      <tr>
-        <th width="285px;">Name</th>
+        <th>Name</th>
         <td>Stranger Things</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>Stranger Things is an American science fiction horror web television series created, written, and directed by the Duffer Brothers and released on Netflix. The Duffer Brothers, Shawn Levy, and Dan Cohen serve as executive producers.</td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>SCI-FI, HORROR</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="3"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="4"></td>
       </tr>
     </table>
-    <table  class="supernatural">
+    <table  class="suits">
+     <tr>
+        <th>Name</th>
+        <td>Suits</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Suits is an American legal drama television series created and written by Aaron Korsh. The series premiered on June 23, 2011, on USA Network, and is produced by Universal Cable. It is the network's longest running original series in terms of seasons and episodes.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>DRAMA</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td id="5"></td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td id="6"></td>
+      </tr>
+    </table>
+    <table   class="supernatural">
      <tr>
         <th>Name</th>
         <td>Super Natural</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>Starring Jared Padalecki as Sam Winchester and Jensen Ackles as Dean Winchester, the series follows the two brothers as they hunt demons, ghosts, monsters, and other supernatural beings. </td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>DRAMA</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="7"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="8"></td>
       </tr>
     </table>
-    <table  class="walkingdead">
+    <table class="thewalkingdead">
      <tr>
         <th>Name</th>
-        <td>Walking Dead</td>
+        <td>The Walking Dead</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>The Walking Dead takes place after the onset of a worldwide zombie apocalypse. The zombies, colloquially referred to as "walkers", shamble towards living humans and other creatures to eat them; they are attracted to noise, such as gunshots, and to different scents, e.g. humans.</td>
      </tr>
      <tr>
         <th>Cast</th>
-        <td>blah blah</td>
+        <td>HORROR</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="9"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="10"></td>
       </tr>
     </table>
-    <table  class="wire">
+    <table  class="vikings">
+     <tr>
+        <th>Name</th>
+        <td>Vikings</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Vikings is inspired by the sagas of Viking Ragnar Lothbrok, one of the best-known legendary Norse heroes and notorious as the scourge of England and France. The show portrays Ragnar as a farmer who rises to fame by successful raids into England, and eventually becomes a Scandinavian King, with the support of his family and fellow warriors</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>ADVENTURE</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td id="11"></td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td id="12"></td>
+      </tr>
+    </table>
+    <table  class="thewire">
      <tr>
         <th>Name</th>
         <td>The Wire</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>The Wire is an American crime drama television series created and primarily written by author and former police reporter David Simon. The series was broadcast by the cable network HBO in the United States. The Wire premiered on June 2, 2002, and ended on March 9, 2008, comprising 60 episodes over five seasons.</td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>Drama</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="13"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="14"></td>
       </tr>
     </table>
-    <table  class="truedetective">
-     <tr>
-        <th width="285px;">Name</th>
-        <td>True Detective</td>
-      </tr>
-     <tr>
-        <th>Description</th>
-        <td>blah blah</td>
-     </tr>
-     <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
-      </tr>
-      <tr>
-        <th>positive</th>
-        <td>55%</td>
-      </tr>
-      <tr>
-        <th>Negative</th>
-        <td>11%</td>
-      </tr>
-    </table>
-    <table  class="westworld">
+       <table class="truedetective">
      <tr>
         <th>Name</th>
-        <td>West World</td>
+        <td>True detective</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>True Detective is an American anthology crime drama television series created and written by Nic Pizzolatto. The series, broadcast by the premium cable network HBO in the United States, premiered on January 12, 2014. Each season of the series is structured as a disparate, self-contained narrative, employing new cast ensembles, and following various sets of characters and settings.</td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>Drama</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="15"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="16"></td>
       </tr>
     </table>
-       <table  class="prison">
+    </table>
+       <table class="prisionbreak">
      <tr>
-        <th width="285px;">Name</th>
-        <td>Prison Break</td>
+        <th>Name</th>
+        <td>Prision Break</td>
       </tr>
      <tr>
         <th>Description</th>
-        <td>blah blah</td>
+        <td>The series revolves around two brothers, Lincoln Burrows (Dominic Purcell) and Michael Scofield (Wentworth Miller); Burrows has been sentenced to death for a crime he did not commit, and Scofield devises an elaborate plan to help his brother escape prison and clear his name.</td>
      </tr>
      <tr>
-        <th>Cast</th>
-        <td>blah blah</td>
+        <th>Category</th>
+        <td>Drama</td>
       </tr>
       <tr>
         <th>positive</th>
-        <td>55%</td>
+        <td id="17"></td>
       </tr>
       <tr>
         <th>Negative</th>
-        <td>11%</td>
+        <td id="18"></td>
       </tr>
     </table>
-<ul class="pagination" style="position: absolute; left: 500px; top: 2480px;" >
+    </table>
+       <table class="gameofthrones">
+     <tr>
+        <th>Name</th>
+        <td>Game of Thrones</td>
+      </tr>
+     <tr>
+        <th>Description</th>
+        <td>Game of Thrones is roughly based on the storylines of A Song of Ice and Fire,set in the fictional Seven Kingdoms of Westeros and the continent of Essos. The series chronicles the violent dynastic struggles among the realm's noble families for the Iron Throne, while other families fight for independence from it. It opens with additional threats in the icy North and Essos in the east.</td>
+     </tr>
+     <tr>
+        <th>Category</th>
+        <td>Drama</td>
+      </tr>
+      <tr>
+        <th>positive</th>
+        <td id="19"></td>
+      </tr>
+      <tr>
+        <th>Negative</th>
+        <td id="20"></td>
+      </tr>
+    </table>
+  <ul class="pagination" style="position: absolute; left: 500px; top: 3100px;" >
     <li><a href="website.html">1</a></li>
     <li class="active"><a href="2.html">2</a></li>
-    <li><a href="#">3</a></li>
+    <!-- <li><a href="#">3</a></li>
     <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
+    <li><a href="#">5</a></li> -->
   </ul>
  <ul class="pager">
-<li class="previous" style="position: absolute; left: 100px; top: 2510px;"><a href="website.html">Previous</a></li>
- <li class="next" style="position: absolute; left: 1000px; top: 2510px;"><a href="2.html">Next</a></li>
-</ul>
+    <li class="next" style="position: absolute; left: 1000px; top: 3125px;"><a href="3.html">Next</a></li>
+    <li class="next" style="position: absolute; left: 50px; top: 3125px;"><a href="website.html">Previous</a></li>
+  </ul>
+  <script type="text/javascript">
+    var value_print = JSON.parse(data);
+    var t=1,g=2;
+     for(i=8;i<=18;i++){
+       document.getElementById(t).innerHTML = value_print[i].Positive + "%";
+       document.getElementById(g).innerHTML = value_print[i].Negative + "%";
+     t= t+2;
+     g = g+2;
+    }
+  </script>
 </body>
 </html>
